@@ -1,0 +1,120 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;s
+use App\Usuario;
+use App\Bairro;
+use App\Instituicao;
+use App\Van;
+
+class CadastroController extends Controller
+{
+    public function createUsuarioComum() {
+        return view('cadastro.cadastroCliente');
+    }
+
+    public function storeUsuarioComum(Request $request) {
+        $senha = $request->senha;
+        $hashSenha = Hash::make($senha);
+
+        $newUser = new Usuario();
+
+        $newUser->nome = $request->usuario;
+        $newUser->senha = $hashSenha;
+        $newUser->email = $request->email;
+        $newUser->cpf = $request->cpf;
+        $newUser->tel = $request->tel;
+        $newUser->acesso_id = 1;
+
+        $newUser->save();
+
+        return redirect('/');
+    }
+
+    public function createUsuarioMotorista() {
+        $instituicoes = Instituicao::get();
+        $bairros = Bairro::get();
+
+        return view('cadastro.cadastroMotorista', compact('instituicoes', 'bairros'));
+    }
+
+    public function storeUsuarioMotorista(Request $request) {
+        $newUser = new Usuario();
+
+        $senha = $request->senha;
+        $hashSenha = Hash::make($senha);
+
+        $newUser->nome = $request->usuario;
+        $newUser->senha = $hashSenha;
+        $newUser->email = $request->email;
+        $newUser->cpf = $request->cpf;
+        $newUser->tel = $request->tel;
+        $newUser->acesso_id = 2;
+
+        $newUser->save();
+
+        // Nova van
+        $caracsVan = $request->carac;
+
+        $newVan = new Van();
+        $this->verificaCaracsVan($newVan, $request->carac);
+        $newVan->user_id = $newUser->id;
+
+        $newVan->save();
+
+        $vanInstituicoes = [];
+        foreach($request->instituicoes as $instituicao) {
+            $vanInstituicao = array(
+                'van_id' => $newVan->id,
+                'instituicao_id' => $instituicao
+            );
+
+            $vanInstituicoes[] = $vanInstituicao;
+        }
+
+        DB::table('van_instituicoes')->insert($vanInstituicoes);
+
+        $vanBairros = [];
+        foreach($request->bairros as $bairro) {
+            $vanBairro = array(
+                'van_id' => $newVan->id,
+                'bairro_id' => $bairro
+            );
+
+            $vanBairros[] = $vanBairro;
+        }
+
+        DB::table('van_bairros')->insert($vanBairros);
+
+        return redirect('/cadastro-usuario-motorista');
+    }
+
+    public function verificaCaracsVan($van, $caracs) {
+        if(in_array(1, $caracs)) {
+            $van->ar_condicionado = 1;
+        }
+
+        if(in_array(2, $caracs)) {
+            $van->wifi = 1;
+        }
+
+        if(in_array(3, $caracs)) {
+            $van->teto_alto = 1;
+        }
+
+        if(in_array(4, $caracs)) {
+            $van->porta_auto = 1;
+        }
+
+        if(in_array(5, $caracs)) {
+            $van->assistente = 1;
+        }
+
+        if(in_array(6, $caracs)) {
+            $van->poltrona_estofada = 1;
+        }
+    }
+}
