@@ -15,4 +15,8 @@ class Van extends Model
     public function bairros() {
         return $this->belongsToMany(Bairro::class, 'van_bairros');
     }
+
+    public function usuario() {
+        return $this->belongsTo(Usuario::class, 'user_id');
+    }
 }

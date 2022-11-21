@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\DB;s
+use Illuminate\Support\Facades\DB;
 use App\Usuario;
 use App\Bairro;
 use App\Instituicao;
@@ -89,7 +89,7 @@ class CadastroController extends Controller
 
         DB::table('van_bairros')->insert($vanBairros);
 
-        return redirect('/cadastro-usuario-motorista');
+        return redirect('/');
     }
 
     public function verificaCaracsVan($van, $caracs) {

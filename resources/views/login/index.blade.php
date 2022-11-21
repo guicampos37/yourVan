@@ -1,4 +1,7 @@
 @extends('templates.base')
+@section('css')
+    <link rel="stylesheet" href="{{ asset('/storage/assets/css/style.css')}}">
+@endsection
 
 @section('content')
 <section class="global">
@@ -12,17 +15,22 @@
                         </h2>
                     </div>
                     
-                    <form action="">
+                    <form method="POST">
+                        @csrf
                         <div class="input-form">
-                            <input type="text" placeholder="Usuário">
-                            <input type="text" placeholder="Senha">
+                            <input type="text" placeholder="Email" name="email">
+                            <input type="password" placeholder="Senha" name="senha">
+                            @if($errors->any())
+                                <span id="msgErro">{{ $errors->first() }}</span>
+                            @endif
                         </div>
                        
 
                         <div class="info-login">
-                          <a href=""><span>Esqueceu a senha?</span></a>   
-                           <a href=""><span>Cadastre-se</span></a> 
+                            <a href=""><span>Esqueceu a senha?</span></a>   
+                            <a href=""><span>Cadastre-se</span></a> 
                         </div>
+
                         <div class="btn-login">
                             <input id="btn-login" type="submit" value="Entrar">
                         </div>
