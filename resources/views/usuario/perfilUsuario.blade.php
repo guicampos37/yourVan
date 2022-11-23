@@ -8,7 +8,7 @@
     <section class="global">
         <main class="container">
             <div class="container back-button">
-                <a href="pesquisa.html" id="btnVoltar"> <img id="back-button" src="{{ asset('storage/assets/img/back-button.png') }}" alt="Voltar"></a>
+                <a href="/home" id="btnVoltar"> <img id="back-button" src="{{ asset('storage/assets/img/back-button.png') }}" alt="Voltar"></a>
             </div>
             <div class="perfil-usuario">
                 <div class="perfil-usuario-img">

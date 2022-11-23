@@ -23,8 +23,12 @@
                         <input type="text" placeholder="CPF" name="cpf">
                         <input type="text" placeholder="Telefone" name="tel">
                     </div>
-                    <div class="btn-cadastro mt-5">
+                    <div class="btn-cadastro mt-5 flex-column align-items-center">
                         <input id="btn-cadastro" type="submit" value="Cadastrar">
+                        
+                        <a class="mt-3" href="/cadastro-usuario-motorista">
+                            <span>É um motorista?</span>
+                        </a>
                     </div>
                     
                 </form>

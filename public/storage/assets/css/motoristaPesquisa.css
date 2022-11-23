@@ -1,0 +1,273 @@
+.global{
+
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.header-container{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    border-bottom: #FFB013 2px solid;
+}
+.header-box{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+.header-container{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    border-bottom: #FFB013 2px solid;
+}
+.header-box{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+
+/* MAIN */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#back-button{
+    width: 50px;
+    margin-top: 50px;
+}
+
+/* MOTORISTA PERFIL */
+
+.perfil-motorista{
+padding: 30px;
+border: 4px solid black;
+border-radius: 10px;
+}
+.perfil-motorista-carac{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 800px;
+  
+    border-radius: 10px;
+}
+.carac-perfil{
+    display: flex;
+    flex-direction: column;
+  
+    width: 180px;
+    height: 230px;
+
+}
+.perfil-avaliacao{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 8px;
+}
+#avaliacao-motorista{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.perfil-nome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#nome-motorista{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.carac-van{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 230px;
+    width: 430px;
+  
+}
+.carac-van img{
+    width: 50px;
+}
+.carac-van div {
+    padding: 10px;
+}
+.carac-horarios{
+    margin-left: 20px;
+}
+.horarios-perfil{
+    font-weight: bold;
+}
+
+
+/* ZONAS */
+
+.lista-perfil-motorista{
+    width: 300px;
+    height: 180px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    margin-top: 20px;
+}
+.titulo-lista{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+/* BOTOES */
+.perfil-motorista-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+#button-contato-motorista{
+    background: #5EA859;
+    color: black;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 14px;
+    padding: 8px;
+    width: 130px;
+     font-size: 1.3rem;
+    margin-right: 40px;
+}
+#button-avaliacao-motorista{
+    background: #FFCB0D;
+    color: black;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 14px;
+    padding: 8px;
+    width: 130px;
+   font-size: 1.3rem;
+}
+
+/* Estrelas */
+.estrelas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.estrelas input[type=radio] {
+    display: none;
+  }
+  .estrelas label i.fa{
+    font-size: 2.5em
+  }
+  .estrelas label i.fa:before {
+    content:'\f005';
+    color: #FC0;
+  }
+  .estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
+  }
+
+  /* Modal */
+
+  .modal-avaliacao{
+    display: none;
+    position: absolute;
+    width: 250px;
+    height: 170px;
+    background-color: white;
+    border: 4px solid #FFCB0D;
+    border-radius: 15px;
+    
+  }
+  .modal-sair{
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+  }
+  .modal-sair span{
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+  .modal-sair button{
+    background-color: transparent;
+    border: 3px solid red;
+    border-radius: 40px;
+    color: red;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  .modal-confirmar input{
+    background-color: #FFCB0D;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 100px;
+    padding: 5px;
+
+  }
+  .modal-confirmar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 20px;
+  }
+  
+  /* Footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    border-top: 2px solid #E8A20C;
+    padding: 10px 200px 0px 200px;
+}
+.footer-empresarial{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 200px;
+    
+}
+
+footer h3{
+    color: #E8A20C;
+}
+.footer-inst{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 200px;
+    margin-left: 50px;
+}
+a{
+    cursor: pointer;
+}

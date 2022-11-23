@@ -11,13 +11,11 @@ use Illuminate\Support\Facades\Auth;
 class PesquisaController extends Controller
 {
     public function home() {
-        $user = Auth::user();
-
-        if($user != null) {
-            return view('pesquisa.home');
+        if(Auth::check() == false) {
+            return redirect()->route('login-usuario');
         }
 
-        return redirect('/login');
+        return view('pesquisa.home');        
     }
 
     public function buscaMotorista(Request $request) {
@@ -54,5 +52,9 @@ class PesquisaController extends Controller
         }
 
         return $arrayVans;
+    }
+
+    public function dadosMotorista() {
+        return view('pesquisa.dadosMotorista');
     }
 }

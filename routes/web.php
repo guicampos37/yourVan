@@ -4,7 +4,7 @@ Route::get('/', function(){
     return redirect('/login');
 });
 
-Route::get('/login', 'LoginController@show');
+Route::get('/login', 'LoginController@show')->name('login-usuario');
 Route::post('/login', 'LoginController@autenticacao');
 
 // Cadastro usuário comum
@@ -18,6 +18,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/home', 'PesquisaController@home');
     Route::post('/home', 'PesquisaController@buscaMotorista');
     Route::get('/busca', 'PesquisaController@show');
+    Route::get('dados-motorista', 'PesquisaController@dadosMotorista');
 
     Route::post('/logout', 'LoginController@logout');
 

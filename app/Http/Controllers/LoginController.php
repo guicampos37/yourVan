@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     public function show() {
+        if(Auth::check()) {
+            return redirect('/home');
+        }
+        
         return view('login.index');
     }
 

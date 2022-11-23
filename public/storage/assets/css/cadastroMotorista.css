@@ -15,54 +15,23 @@ body{
 .container{
     margin: auto;
 }
-.header-container{
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    border-bottom: #FFB013 2px solid;
-}
-.header-box{
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
 
-}
-.header-container{
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    border-bottom: #FFB013 2px solid;
-}
-.header-box{
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
-
-}
 /* MAIN */
 .container-cadastro{
     display: flex;
     justify-content: center;
 }
 .box-cadastro{
-    height: 600px;
+    height: 850px;
     width: 700px;
     background-color: #ffffff;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .box-cadastro-van{
-    height: 600px;
+    height: 850px;
     width: 900px;
     background-color: #ffffff;
     display: flex;
@@ -113,8 +82,10 @@ input[type=text], input[type=email], input[type=password] {
     align-items: center;
     justify-content: center;
     color:#000000;
-    font-weight: bold;
    
+}
+.cadastro-title h2{
+    font-weight: bold;
 }
 
 #btn-cadastro{
@@ -137,8 +108,8 @@ a{
 .dados-pessoais{
     font-size: 1.3rem;
     font-weight: bold;
-    margin-left: 100px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .carac-van{
@@ -197,4 +168,53 @@ input[type=checkbox]{
     font-size: 1.2rem;
     font-weight: bold;
     margin: 0px 0px 30px 0px;
+}
+.box-cadastro-van-top{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.perfil-usuario-rotas{
+    height: 200px;
+}
+.rotas-spans{
+    height: 160px;
+    justify-content: space-between;
+}
+.rotas-checkbox{
+    height: 150px;
+    justify-content: space-between;
+}
+.rotas-spans span{
+    height: 30px;
+    width: 70px;
+}
+
+.perfil-usuario-horarios{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+}
+.horarios-span{
+    justify-content: space-between;
+}
+.horarios-checkbox{
+    justify-content: space-between;
+}
+.horarios-span span{
+    width: 60px;
+    height: 30px;
+}
+
+#title-info-vans{
+    width: 220px;
+    
+}
+
+#title-horarios{
+    width: 80px;
+}
+.box-cadastro-van-title h2{
+    font-size: 1.7rem;
 }

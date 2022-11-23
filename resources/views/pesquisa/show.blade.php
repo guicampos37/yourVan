@@ -10,7 +10,7 @@
         <form action="/home" method="POST">
             @csrf
             <div class="search-box">
-                <input class="input-search" type="text" name="busca" placeholder="Busque por Bairro ou Instituição">
+                <input class="input-search" type="text" name="busca" placeholder="Busque por Instituição">
                 <button id="btnPesquisa"><img id="img-search" src="{{ asset('storage/assets/img/search.png') }}" alt="Busca"></button>
             </div>
         </form>
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="button-card">
-                            <button id="more-info-card">Mais informações</button>
+                            <a href="/dados-motorista"><button id="more-info-card">Mais informações</button></a>
                         </div>
                     </div>
                 </div>

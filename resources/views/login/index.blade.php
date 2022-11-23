@@ -28,7 +28,7 @@
 
                         <div class="info-login">
                             <a href=""><span>Esqueceu a senha?</span></a>   
-                            <a href=""><span>Cadastre-se</span></a> 
+                            <a href="/cadastro-usuario-comum"><span>Cadastre-se</span></a> 
                         </div>
 
                         <div class="btn-login">
