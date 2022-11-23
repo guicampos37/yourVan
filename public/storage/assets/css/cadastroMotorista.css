@@ -1,0 +1,200 @@
+.global{
+    background-color: #D2D2D2;
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    margin: auto;
+}
+.header-container{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    border-bottom: #FFB013 2px solid;
+}
+.header-box{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+.header-container{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    border-bottom: #FFB013 2px solid;
+}
+.header-box{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+/* MAIN */
+.container-cadastro{
+    display: flex;
+    justify-content: center;
+}
+.box-cadastro{
+    height: 600px;
+    width: 700px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.box-cadastro-van{
+    height: 600px;
+    width: 900px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.logo-cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-cadastro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.input-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info-cadastro{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0 30px;
+}
+.btn-cadastro{
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    width: 40%;
+    border: none;
+    padding: 4px 10px 4px 10px;
+    margin-top: 2%;
+    border-radius: 30px;
+    border: 3px solid #FFCB0D;
+}
+
+.cadastro-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#000000;
+    font-weight: bold;
+   
+}
+
+#btn-cadastro{
+    background-color: #FFCB0D;
+    color: #000;
+    border: none;
+    width: 300px;
+    padding: 5px 0px 8px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: medium;
+    border: 3px solid #000;
+    font-weight: bold;
+}
+
+a{
+    color: #825A09 !important;
+    text-decoration: none !important;
+}
+.dados-pessoais{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+.carac-van{
+    width: 50%;
+    display: flex;
+   justify-content: center;
+    margin: 0px 0px 0px 15px;
+}
+label{
+    font-size: 1.2rem;
+    margin: 10px 10px 0px 0px;
+}
+
+.rota-van{
+    width: 50%;
+    margin-right: 50px;
+}
+
+.label-carac{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.radio-carac{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 60px;
+    
+}
+
+input[type=checkbox]{
+    border: 3px solid #FFCB0D ;
+    padding: 10px;
+  
+}
+
+.form-check-input:checked {
+    background-color: #FFCB0D !important;
+    border-color: #FFCB0D !important;
+
+}
+
+
+.form-select{
+    margin-right: 15px;
+    border: 3px solid #FFCB0D !important;
+}
+
+/* select:-internal-list-box option:checked {
+    background-color: ;
+} */
+
+.subtitle-van{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0px 0px 30px 0px;
+}

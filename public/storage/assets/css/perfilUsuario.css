@@ -1,0 +1,90 @@
+.global{
+
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    /* margin-right: 10px;
+    margin-left: 20px; */
+
+    margin: auto;
+}
+
+#btnVoltar {
+    text-align: center;
+}
+
+/* MAIN */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#back-button{
+    width: 50px;
+    margin-top: 50px;
+}
+
+/* Perfil Usuario */
+
+.perfil-usuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 20px;
+}
+.perfil-usuario-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nome-perfil-usuario{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.form-perfil-usuario{
+    width: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+}
+.form-perfil-usuario div label{
+    margin-right: 10px;
+    width: 90px;
+ 
+}
+.form-perfil-usuario div input[type=text]{
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.perfil-usuario-editar{
+    cursor: pointer;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img-edit{
+    width: 30px;
+}
+.edit-submit{
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+}

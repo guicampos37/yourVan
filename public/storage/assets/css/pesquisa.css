@@ -1,0 +1,118 @@
+.global{
+
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+/* MAIN */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.search-box{
+    margin-top: 30px;
+}
+#img-search{
+    width: 30px;
+    cursor: pointer;
+}
+#btnPesquisa {
+    border: none;
+    background: none;
+}
+.input-search{
+    width: 350px;
+    border: 3px solid #E8A20C;
+    border-radius: 10px;
+    padding: 5px 0px 5px 10px;
+   
+}
+
+/* CARDS */
+.card-search{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    border: 5px solid #FFB013;
+    border-radius: 10px;
+    height: 270px;
+    min-width: 30%;
+}
+.perfil-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 5px solid #FFB013;
+    height: 100%;
+}
+.perfil-card span {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.info-card {
+    min-width: 77%;
+}
+
+.info-van-card{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 5px solid #FFB013;
+    padding: 8px;
+}
+.zona-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 5px solid #FFB013;
+    padding: 8px;
+    width: 100%;
+}
+.zona-card-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 50px;
+}
+#title-zona-card{
+    font-weight: 1rem;
+    font-weight: bold;
+}
+.button-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+#more-info-card{
+    width: 200px;
+    background-color: #FF9600;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+}
+.zona-card-regiao{
+    width: 100%;
+}
+.zona-card-horario{
+    width: 100%;
+}

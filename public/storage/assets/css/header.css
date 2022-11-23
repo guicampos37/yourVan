@@ -1,0 +1,30 @@
+.header-container{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    border-bottom: #FFB013 2px solid;
+}
+.header-box{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+.header-container{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    border-bottom: #FFB013 2px solid;
+}
+.header-box{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
