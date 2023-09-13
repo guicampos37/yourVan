@@ -30,7 +30,7 @@ utilizar o framework laravel, então nossa estrutura de projeto ficou assim:
 * Bootstrap 5
 * JavaScript
 #### Desenvolvimento Back-end 🏳
-* Laravel
+* PHP + Laravel
 * Mysql
 
 #### Demais ferramentas utilizadas 🏳
