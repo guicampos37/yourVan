@@ -1,7 +1,20 @@
 @extends('templates.base')
+
 @section('css')
     <link rel="stylesheet" href="{{ asset('storage/assets/css/cadastroMotorista.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
 @endsection
+
+@push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#instituicoes').select2();
+            $('#bairros').select2();
+        });
+    </script>
+@endpush
 
 @section('content')
     <section class="global">
@@ -9,7 +22,12 @@
             @csrf
             <div class="container container-cadastro">
                 <div class="box-cadastro mt-5 flex-column">
-                    <div class="form-cadastro mt-5 ">
+                    @if($errors->any())
+                        <div class="alert alert-danger w-100 text-center">
+                            Preencha todos os campos corretamente!
+                        </div>
+                    @endif
+                    <div class="form-cadastro">
                         <div class="cadastro-title mb-5">
                             <h2>
                                 Cadastro de Motorista
@@ -29,38 +47,6 @@
                             <input type="text" placeholder="Telefone" name="tel">
                         </div>
                             
-                    </div>
-                    <div class="box-cadastro-middle d-flex justify-content-around w-100 mt-5">
-                        <span class="subtitle-van">Zonas</span>
-                        <span class="subtitle-van">Horários</span>
-                    </div>
-                    <div class="box-cadastro-van-bottom d-flex justify-content-around w-100">
-                        <div class="perfil-usuario-rotas d-flex justify-content-center align-item-center">
-                            <div class="rotas-spans d-flex flex-column">
-                                <span>Sul</span>
-                                <span>Norte</span>
-                                <span>Leste</span>
-                                <span>Oeste</span>
-                            </div>
-                            <div class="rotas-checkbox d-flex flex-column">
-                                <input type="checkbox" class="form-check-input">
-                                <input type="checkbox" class="form-check-input">
-                                <input type="checkbox" class="form-check-input">
-                                <input type="checkbox" class="form-check-input">
-                            </div>
-                        </div>
-                        <div class="perfil-usuario-horarios">
-                            <div class="horarios-span d-flex flex-column">
-                                <span>Manhã</span>
-                                <span>Tarde</span>
-                                <span>Noite</span>
-                            </div>
-                            <div class="horarios-checkbox d-flex flex-column">
-                                <input type="checkbox" class="form-check-input">
-                                <input type="checkbox" class="form-check-input">
-                                <input type="checkbox" class="form-check-input">
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="box-cadastro-van mt-5 flex-column">
@@ -89,17 +75,17 @@
                         </div>
                         <div class="rota-van">
                             <span class="subtitle-van">Instituições Atendidas</span>
-                            <select class="form-select mb-5 mt-2" multiple aria-label="multiple select example" name="instituicoes[]" id="instituicoes[]">
+                            <select class="form-select mb-5 mt-2" multiple aria-label="multiple select example" name="instituicoes[]" id="instituicoes">
                                 @foreach($instituicoes as $instituicao)
                                 <option value="{{ $instituicao->id }}">{{ ucfirst($instituicao->nome) }}</option>
                                 @endforeach
                             </select>
-                            <span class="subtitle-van">Bairros Atendidos</span>
-                            <select class="form-select mt-2" multiple aria-label="multiple select example" name="bairros[]">
+                            {{-- <span class="subtitle-van">Bairros Atendidos</span>
+                            <select class="form-select mt-2" multiple aria-label="multiple select example" name="bairros[]" id="bairros">
                                 @foreach($bairros as $bairro)
                                     <option value="{{ $bairro->id }}">{{ $bairro->nome }}</option>
                                 @endforeach
-                            </select>    
+                            </select>  --}}
                         </div> 
                     </div>
                     

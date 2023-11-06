@@ -17,6 +17,14 @@ class CadastroController extends Controller
     }
 
     public function storeUsuarioComum(Request $request) {
+        $request->validate([
+            'usuario' => 'required|max:255',
+            'senha' => 'required|min:6',
+            'email' => 'required|email|unique:usuarios,email',
+            'cpf' => 'required',
+            'tel' => 'required',
+        ]);
+
         $senha = $request->senha;
         $hashSenha = Hash::make($senha);
 
@@ -44,6 +52,16 @@ class CadastroController extends Controller
     public function storeUsuarioMotorista(Request $request) {
         $newUser = new Usuario();
 
+        $request->validate([
+            'usuario' => 'required',
+            'senha'   => 'required',
+            'email'   => 'required|email|unique:usuarios,email',
+            'cpf'     => 'required',
+            'tel'     => 'required',
+            'carac'   => 'required',
+            'instituicoes' => 'required|array',
+        ]);
+
         $senha = $request->senha;
         $hashSenha = Hash::make($senha);
 
@@ -60,7 +78,7 @@ class CadastroController extends Controller
         $caracsVan = $request->carac;
 
         $newVan = new Van();
-        $this->verificaCaracsVan($newVan, $request->carac);
+        $this->verificaCaracsVan($newVan, $caracsVan);
         $newVan->user_id = $newUser->id;
 
         $newVan->save();
@@ -77,17 +95,17 @@ class CadastroController extends Controller
 
         DB::table('van_instituicoes')->insert($vanInstituicoes);
 
-        $vanBairros = [];
-        foreach($request->bairros as $bairro) {
-            $vanBairro = array(
-                'van_id' => $newVan->id,
-                'bairro_id' => $bairro
-            );
+        // $vanBairros = [];
+        // foreach($request->bairros as $bairro) {
+        //     $vanBairro = array(
+        //         'van_id' => $newVan->id,
+        //         'bairro_id' => $bairro
+        //     );
 
-            $vanBairros[] = $vanBairro;
-        }
+        //     $vanBairros[] = $vanBairro;
+        // }
 
-        DB::table('van_bairros')->insert($vanBairros);
+        // DB::table('van_bairros')->insert($vanBairros);
 
         return redirect('/');
     }

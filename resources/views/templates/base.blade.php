@@ -16,5 +16,6 @@
     @include('templates.footer')
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     @yield('js')
+    @stack('scripts')
 </body>
 </html>

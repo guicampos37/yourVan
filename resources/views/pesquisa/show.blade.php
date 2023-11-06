@@ -49,20 +49,31 @@
                         </div>
                         <div class="zona-card">
                             <div class="zona-card-horario">
-                                <span id="title-zona-card">Horários:</span>
+                                <span id="title-zona-card">Informações da van:</span>
                                 <ul class="zona-card-list">
-                                    <li class="item-zona-card">Tarde</li>
-                                    <li class="item-zona-card">Noite</li>
-                                    <li class="item-zona-card">Manhã</li>
-                                </ul>
-                            </div>
-                            <div class="zona-card-regiao">
-                                <span id="title-zona-card">Zonas:</span>
-                                <ul class="zona-card-list">
-                                    <li class="item-zona-card">Sul</li>
-                                    <li class="item-zona-card">Norte</li>
-                                    <li class="item-zona-card">Leste</li>
-                                    <li class="item-zona-card">Oeste</li>
+                                @if($van->ar_condicionado == 1)
+                                    <li>Ar Condicionado</li>
+                                @endif
+    
+                                @if($van->teto_alto == 1)
+                                    <li>Teto alto</li>
+                                @endif
+    
+                                @if($van->poltrona_estofada == 1)
+                                    <li>Poltrona estofada</li>
+                                @endif
+    
+                                @if($van->wifi == 1)
+                                    <li>Wifi</li>
+                                @endif
+    
+                                @if($van->assistente == 1)
+                                    <li>Assistente</li>
+                                @endif
+    
+                                @if($van->porta_auto == 1)
+                                    <li>Porta automatica</li>
+                                @endif
                                 </ul>
                             </div>
                         </div>

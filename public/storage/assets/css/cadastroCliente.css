@@ -21,7 +21,7 @@ body{
     justify-content: center;
 }
 .box-cadastro{
-    height: 520px;
+    /* height: 520px; */
     width: 700px;
     background-color: #FFB013;
     display: flex;

@@ -8,14 +8,14 @@
     <section class="global">
         <main class="container">
             <div class="container back-button">
-                <a href="pesquisa.html" id="btnVoltar"> <img id="back-button" src="{{ asset('storage/assets/img/back-button.png') }}" alt="Voltar"></a>
+                <a href="home" id="btnVoltar"> <img id="back-button" src="{{ asset('storage/assets/img/back-button.png') }}" alt="Voltar"></a>
             </div>
             <div class="perfil-usuario">
                 <form action="">
                     <div class="perfil-usuario-header">
                         <div class="perfil-usuario-img">
                             <img src="{{ asset('storage/assets/img/perfil-de-usuario.png') }}" alt="Perfil de Usuário">
-                            <span class="nome-perfil-usuario">Josias</span>
+                            <span class="nome-perfil-usuario">{{ Auth::user()->nome }}</span>
                         </div>
                         <div class="perfil-usuario-inputs">
                             <div class="form-perfil-usuario">

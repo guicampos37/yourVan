@@ -8,11 +8,17 @@
         <div class="container container-cadastro">
         <div class="box-cadastro mt-5">
             <div class="form-cadastro">
-                <div class="cadastro-title mb-5">
+                <div class="cadastro-title mb-2 mt-3">
                     <h2>
                         Cadastro de Usuário
                     </h2>
                 </div>
+
+                @if($errors->any())
+                    <div class="alert alert-danger">
+                        Preencha todos os campos corretamente.
+                    </div>
+                @endif
                 
                 <form method="POST">
                     @csrf
@@ -26,7 +32,7 @@
                     <div class="btn-cadastro mt-5 flex-column align-items-center">
                         <input id="btn-cadastro" type="submit" value="Cadastrar">
                         
-                        <a class="mt-3" href="/cadastro-usuario-motorista">
+                        <a class="mt-3 mb-3" href="/cadastro-usuario-motorista">
                             <span>É um motorista?</span>
                         </a>
                     </div>
