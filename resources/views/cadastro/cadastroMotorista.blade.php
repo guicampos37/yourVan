@@ -90,8 +90,12 @@
                     </div>
                     
                     <div class="box-cadastro-botao mt-5">
-                        <div class="btn-cadastro mt-5 mb-4">
+                        <div class="btn-cadastro mt-5 mb-4 d-flex flex-column align-items-center">
                             <input id="btn-cadastro" type="submit" value="Cadastrar">
+
+                            <a href="/login" class="mt-3">
+                                <span>Já possui cadastro?</span>
+                            </a>
                         </div> 
                     </div>      
                 </div>

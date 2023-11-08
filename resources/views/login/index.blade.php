@@ -23,18 +23,15 @@
                             @if($errors->any())
                                 <span id="msgErro">{{ $errors->first() }}</span>
                             @endif
-                        </div>
-                       
+                        </div>                       
 
-                        <div class="info-login">
-                            <a href=""><span>Esqueceu a senha?</span></a>   
-                            <a href="/cadastro-usuario-comum"><span>Cadastre-se</span></a> 
-                        </div>
-
-                        <div class="btn-login">
+                        <div class="btn-login mt-4">
                             <input id="btn-login" type="submit" value="Entrar">
                         </div>
                         
+                        <div class="info-login">
+                            <a href="/cadastro-usuario-comum"><span>Cadastre-se</span></a> 
+                        </div>
                     </form>
                 </div>
             </div>

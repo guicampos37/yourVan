@@ -31,6 +31,10 @@
                     </div>
                     <div class="btn-cadastro mt-5 flex-column align-items-center">
                         <input id="btn-cadastro" type="submit" value="Cadastrar">
+
+                        <a class="mt-3" href="/login">
+                            <span>Já possui cadastro?</span>
+                        </a>
                         
                         <a class="mt-3 mb-3" href="/cadastro-usuario-motorista">
                             <span>É um motorista?</span>

@@ -16,7 +16,7 @@
         </form>
         @if(Session::get('vans') != null)
             @foreach(Session::get('vans') as $van)
-                <div class="card-search">
+                <div class="card-search d-flex">
                     <div class="perfil-card">
                         <img src="{{ asset('storage/assets/img/perfil-de-usuario.png') }}" alt="perfil-motorista">
                         <span> {{ $van->usuario->nome }}</span>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="zona-card">
                             <div class="zona-card-horario">
-                                <span id="title-zona-card">Informações da van:</span>
+                                <span id="title-zona-card ">Informações da van:</span>
                                 <ul class="zona-card-list">
                                 @if($van->ar_condicionado == 1)
                                     <li>Ar Condicionado</li>
