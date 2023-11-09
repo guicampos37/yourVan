@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Van extends Model
 {
     public $timestamps = false;
+    
+    protected $fillable = [
+        'ar_condicionado',
+        'wifi',
+        'teto_alto',
+        'porta_auto',
+        'assistente',
+        'poltrona_estofada',
+    ];
 
     public function instituicoes() {
         return $this->belongsToMany(Instituicao::class, 'van_instituicoes');

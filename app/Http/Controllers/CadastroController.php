@@ -95,18 +95,6 @@ class CadastroController extends Controller
 
         DB::table('van_instituicoes')->insert($vanInstituicoes);
 
-        // $vanBairros = [];
-        // foreach($request->bairros as $bairro) {
-        //     $vanBairro = array(
-        //         'van_id' => $newVan->id,
-        //         'bairro_id' => $bairro
-        //     );
-
-        //     $vanBairros[] = $vanBairro;
-        // }
-
-        // DB::table('van_bairros')->insert($vanBairros);
-
         return redirect('/');
     }
 

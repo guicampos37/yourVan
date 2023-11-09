@@ -27,7 +27,7 @@
                 @else
                     <div class="d-flex align-items-center">
                         <div>
-                            <a class="me-2" href="/perfil-motorista"><img id="img-menu" src="{{asset('storage/assets/img/menu.png')}}" alt="menu"></a> 
+                            <a class="me-2" href="/perfil-motorista"><img id="img-menu" src="{{asset('storage/assets/img/perfil-de-usuario.png')}}" alt="menu"></a> 
                         
                             <div>
                                 <a href="/perfil-motorista" id="perfil"><span id="meu-perfil">Meu Perfil</span></a>

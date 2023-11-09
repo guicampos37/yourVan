@@ -24,5 +24,6 @@ Route::middleware(['auth'])->group(function() {
 
     Route::get('/perfil-usuario', 'UsuarioController@showUsuarioComum');
     Route::get('/perfil-motorista', 'UsuarioController@showUsuarioMotorista');
+    Route::post('/perfil-motorista', 'UsuarioController@updateUsuarioMotorista');
 });
 

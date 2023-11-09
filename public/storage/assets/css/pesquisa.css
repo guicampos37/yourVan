@@ -47,19 +47,21 @@ main{
 }
 
 /* CARDS */
+.card-container {
+    width: 35%;
+}
+
 .card-search{
     display: flex;
     align-items: center;
     margin-top: 100px;
     border: 5px solid #FFB013;
     border-radius: 10px;
-    min-width: 43%;
+    /* min-width: 43%; */
 }
 .perfil-card{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border-right: 5px solid #FFB013;
     height: 100%;
 }
 .perfil-card span {
@@ -69,7 +71,9 @@ main{
 }
 
 .info-card {
-    min-width: 77%;
+    width: 100%;
+    border-left: 5px solid #FFB013;
+
 }
 
 .info-van-card{

@@ -12,5 +12,18 @@ function desativar (){
     modal.style.display = "none";
 }
 
+document.getElementById('filtroInstituicoes').addEventListener('keyup', function() {
+    var searchTerm = this.value.toLowerCase();
+    var instituicoes = document.getElementById('listaInstituicoes').getElementsByTagName('li');
+
+    Array.from(instituicoes).forEach(function(instituicao) {
+        var nomeInstituicao = instituicao.textContent.toLowerCase();
+        if (nomeInstituicao.includes(searchTerm)) {
+            instituicao.style.display = '';
+        } else {
+            instituicao.style.display = 'none';
+        }
+    });
+});
 
 

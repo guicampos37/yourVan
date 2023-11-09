@@ -10,11 +10,12 @@
         <form action="/home" method="POST">
             @csrf
             <div class="search-box">
-                <input class="input-search" type="text" name="busca" placeholder="Busque por Instituição">
+                <input class="input-search" type="text" name="busca" placeholder="Busque um motorista por instituição...">
                 <button id="btnPesquisa"><img id="img-search" src="{{ asset('storage/assets/img/search.png') }}" alt="Busca"></button>
             </div>
         </form>
         @if(Session::get('vans') != null)
+            <div class="card-container">
             @foreach(Session::get('vans') as $van)
                 <div class="card-search d-flex">
                     <div class="perfil-card">
@@ -49,7 +50,7 @@
                         </div>
                         <div class="zona-card">
                             <div class="zona-card-horario">
-                                <span id="title-zona-card ">Informações da van:</span>
+                                <span id="title-zona-card" class="font-weight-bold">Informações da van:</span>
                                 <ul class="zona-card-list">
                                 @if($van->ar_condicionado == 1)
                                     <li>Ar Condicionado</li>
@@ -78,11 +79,12 @@
                             </div>
                         </div>
                         <div class="button-card">
-                            <a href="/dados-motorista/{{ $van->usuario->id }}"><button id="more-info-card">Mais informações</button></a>
+                            <a target="_blank" href="/dados-motorista/{{ $van->usuario->id }}"><button id="more-info-card">Mais informações</button></a>
                         </div>
                     </div>
                 </div>
             @endforeach
+            </div>
         @endif
     </main>
 </section>

@@ -73,19 +73,19 @@
                 </div>
             </div>
             <div class="perfil-motorista-zonas d-flex justify-content-center align-item-center">
-                <div class="zonas-instituicoes mt-4 d-flex flex-column align-items-center">
+                <div class="zonas-instituicoes mt-4 d-flex flex-column align-items-center w-100">
                     <span class="titulo-lista">Instituições Atendidas</span>
-                    <ul class="lista-perfil-motorista">
-                        <li>Facens</li>
-                        <li>Unip</li>
-                        <li>Uniso</li>
-                        <li>Anhanguera</li>                    
+                    <input type="text" class="form-control w-50" id="filtroInstituicoes" placeholder="Pesquisar instituição...">
+                    <ul class="lista-perfil-motorista" id="listaInstituicoes">
+                        @foreach($usuario->van->instituicoes as $instituicao)
+                            <li>{{ ucfirst($instituicao->nome) }}</li>
+                        @endforeach                
                     </ul>
                 </div>
             </div>
             <div class="perfil-motorista-buttons">
                 <div class="motorista-buttons-actions">
-                    <button id="button-contato-motorista">Contato</button>
+                    <a id="button-contato-motorista" href="https://wa.me/{{ $usuario->tel }}" class="btn btn-primary" target="_blank">Contato</a>
                     <button id="button-avaliacao-motorista">Avaliar</button>
                 </div>
 
