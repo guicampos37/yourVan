@@ -25,61 +25,61 @@
                     </div>
                     <div class="perfil-nome">
                         <img src="{{ asset('storage/assets/img/perfil-de-usuario.png') }}" alt="Perfil Motorista">
-                        <span id="nome-motorista">Josias</span>
+                        <span id="nome-motorista">{{ $usuario->nome }}</span>
                     </div>
                 </div>
-                <div class="carac-van">
-                    <div>
-                        <img src="{{ asset('storage/assets/img/ar-condicionado.png') }}" alt="Ar condicionado">
-                        <span>Ar condicionado</span>
+                <div class="d-flex flex-column align-items-center ml-3 border border-warning rounded p-2 w-100">
+                    <div class="mb-2">
+                        <h2>Características Van</h2>
+                    </div >
+                    <div class="d-flex align-items-center caracs_van">
+                        @if($usuario->van->ar_condicionado == 1)
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="{{ asset('storage/assets/img/ar-condicionado.png') }}" alt="Ar condicionado">
+                            <span class="text-center">Ar condicionado</span>
+                        </div>
+                        @endif
+                        @if($usuario->van->teto_alto == 1)
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="{{ asset('storage/assets/img/altura.png') }}" alt="Teto alto">
+                            <span class="text-center">Teto Alto</span>
+                        </div>
+                        @endif
+                        @if($usuario->van->poltrona_estofada == 1)
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="{{ asset('storage/assets/img/cadeirinha.png') }}" alt="Poltrona Estolfada">
+                            <span class="text-center">Poltrona Estofada</span>
+                        </div>
+                        @endif
+                        @if($usuario->van->wifi == 1)
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="{{ asset('storage/assets/img/wi-fi.png') }}" alt="wi-fi">
+                            <span class="text-center">Wi-fi</span>
+                        </div>
+                        @endif
+                        @if($usuario->van->assistente == 1)
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="{{ asset('storage/assets/img/secretario.png') }}" alt="Assistente">
+                            <span class="text-center">Assistente</span>
+                        </div>
+                        @endif
+                        @if($usuario->van->porta_auto == 1)
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="{{ asset('storage/assets/img/portas-automaticas.png') }}" alt="Porta Automática">
+                            <span class="text-center">Portas Automáticas</span>
+                        </div>
+                        @endif
                     </div>
-                    <div>
-                        <img src="{{ asset('storage/assets/img/altura.png') }}" alt="Teto alto">
-                        <span>Teto Alto</span>
-                    </div>
-                    <div>
-                        <img src="{{ asset('storage/assets/img/cadeirinha.png') }}" alt="Poltrona Estolfada">
-                        <span>Poltrona Estofada</span>
-                    </div>
-                    <div>
-                        <img src="{{ asset('storage/assets/img/wi-fi.png') }}" alt="wi-fi">
-                        <span>Wi-fi</span>
-                    </div>
-                    <div>
-                        <img src="{{ asset('storage/assets/img/secretario.png') }}" alt="Assistente">
-                        <span>Assistente</span>
-                    </div>
-                    <div>
-                        <img src="{{ asset('storage/assets/img/portas-automaticas.png') }}" alt="Porta Automática">
-                        <span>Portas Automáticas</span>
-                    </div>
-                </div>
-                <div class="carac-horarios">
-                    <span class="horarios-perfil">Horários:</span>
-                    <ul>
-                        <li>Manhã</li>
-                        <li>Tarde</li>
-                        <li>Noite</li>
-                    </ul>
                 </div>
             </div>
-            <div class="perfil-motorista-zonas d-flex justify-content-between align-item-center">
-                <div class="zonas-instituicoes mt-4 ">
+            <div class="perfil-motorista-zonas d-flex justify-content-center align-item-center">
+                <div class="zonas-instituicoes mt-4 d-flex flex-column align-items-center">
                     <span class="titulo-lista">Instituições Atendidas</span>
                     <ul class="lista-perfil-motorista">
                         <li>Facens</li>
                         <li>Unip</li>
                         <li>Uniso</li>
                         <li>Anhanguera</li>                    
-                    </ul>
-                </div>
-                <div class="zonas-bairros mt-4">
-                    <span class="titulo-lista">Bairros Atendidos</span>
-                    <ul class="lista-perfil-motorista">
-                        <li>Campolim</li>
-                        <li>Centro</li>
-                        <li>Sorocaba Park</li>
-                        <li>Vila Leão</li>
                     </ul>
                 </div>
             </div>

@@ -78,7 +78,7 @@
                             </div>
                         </div>
                         <div class="button-card">
-                            <a href="/dados-motorista"><button id="more-info-card">Mais informações</button></a>
+                            <a href="/dados-motorista/{{ $van->usuario->id }}"><button id="more-info-card">Mais informações</button></a>
                         </div>
                     </div>
                 </div>

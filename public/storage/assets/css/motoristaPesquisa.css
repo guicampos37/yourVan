@@ -63,6 +63,10 @@ main{
 
 /* MOTORISTA PERFIL */
 
+.caracs_van div {
+    margin-right: 10px;
+}
+
 .perfil-motorista{
 padding: 30px;
 border: 4px solid black;
@@ -70,7 +74,6 @@ border-radius: 10px;
 }
 .perfil-motorista-carac{
     display: flex;
-    justify-content: start;
     align-items: center;
     width: 800px;
   
@@ -105,14 +108,12 @@ border-radius: 10px;
     font-size: 1.5rem;
     font-weight: bold;
 }
-.carac-van{
+/* .carac-van-container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 230px;
-    width: 430px;
-  
-}
+    height: 230px;  
+} */
 .carac-van img{
     width: 50px;
 }

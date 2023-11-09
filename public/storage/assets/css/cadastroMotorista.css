@@ -19,10 +19,10 @@ html, body {
 .container-cadastro{
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 .box-cadastro{
-    height: 850px;
-    width: 700px;
+    width: 50%;
     background-color: #ffffff;
     display: flex;
     align-items: start;
@@ -30,8 +30,7 @@ html, body {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .box-cadastro-van{
-    height: 850px;
-    width: 900px;
+    width: 50%;
     background-color: #ffffff;
     display: flex;
     align-items: center;

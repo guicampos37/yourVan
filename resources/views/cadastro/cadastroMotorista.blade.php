@@ -20,8 +20,8 @@
     <section class="global">
         <form method="POST">
             @csrf
-            <div class="container container-cadastro">
-                <div class="box-cadastro mt-5 flex-column">
+            <div class="container container-cadastro mt-5">
+                <div class="box-cadastro flex-column">
                     @if($errors->any())
                         <div class="alert alert-danger w-100 text-center">
                             Preencha todos os campos corretamente!
@@ -49,7 +49,7 @@
                             
                     </div>
                 </div>
-                <div class="box-cadastro-van mt-5 flex-column">
+                <div class="box-cadastro-van flex-column">
                     <div class="box-cadastro-van-title">
                         <h2>Informações da Van</h2>
                     </div>

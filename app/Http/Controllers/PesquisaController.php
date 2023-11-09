@@ -54,7 +54,9 @@ class PesquisaController extends Controller
         return $arrayVans;
     }
 
-    public function dadosMotorista() {
-        return view('pesquisa.dadosMotorista');
+    public function dadosMotorista($id) {
+        $usuario = Usuario::find($id);
+
+        return view('pesquisa.dadosMotorista', compact('usuario'));
     }
 }
