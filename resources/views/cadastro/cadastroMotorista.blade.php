@@ -6,12 +6,18 @@
 @endsection
 
 @push('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script>
         $(document).ready(function() {
             $('#instituicoes').select2();
             $('#bairros').select2();
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('input[name="cpf"]').mask('000.000.000-00', {reverse: true});
+            $('input[name="tel"]').mask('(00) 00000-0000');
         });
     </script>
 @endpush

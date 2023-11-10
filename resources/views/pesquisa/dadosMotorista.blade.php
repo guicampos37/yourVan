@@ -11,21 +11,41 @@
 @section('content')
 <section class="global">
     <main>
-        <div class="container back-button">
-            
+        <div class="container back-button d-flex">
             <a href="/home">  <img id="back-button" src="{{ asset('storage/assets/img/back-button.png') }}" alt="Voltar"></a>
         </div>
+
+        @if (session('success'))
+            <div id="success-popup" class="success-popup">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if (session('success'))
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var popup = document.getElementById('success-popup');
+                    popup.style.display = 'block';
+                    
+                    setTimeout(function() {
+                        popup.style.display = 'none';
+                    }, 3000);
+                });
+            </script>
+        @endif
 
         <div class="perfil-motorista">
             <div class="perfil-motorista-carac">
                 <div class="carac-perfil">
+                    @if($mediaNota != 0)
                     <div class="perfil-avaliacao ml-4">
-                        <span id="avaliacao-motorista">5</span>
+                        <span id="avaliacao-motorista">{{ $mediaNota }}</span>
                         <img src="{{ asset('storage/assets/img/estrela.png') }}" alt="Avaliação">
                     </div>
+                    @endif
                     <div class="perfil-nome">
                         <img src="{{ asset('storage/assets/img/perfil-de-usuario.png') }}" alt="Perfil Motorista">
-                        <span id="nome-motorista">{{ $usuario->nome }}</span>
+                        <span id="nome-motorista" class="text-center">{{ $usuario->nome }}</span>
                     </div>
                 </div>
                 <div class="d-flex flex-column align-items-center ml-3 border border-warning rounded p-2 w-100">
@@ -98,7 +118,8 @@
                         
                     </div>
                     
-                    <form action="">
+                    <form action="/dados-motorista/{{$usuario->id}}" method="POST">
+                        @csrf
                         <div class="estrelas">
                             <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
                             <label for="cm_star-1"><i class="fa"></i></label>

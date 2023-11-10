@@ -20,6 +20,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/busca', 'PesquisaController@show');
     Route::post('/busca', 'PesquisaController@buscaMotorista');
     Route::get('dados-motorista/{id}', 'PesquisaController@dadosMotorista');
+    Route::post('/dados-motorista/{motoristaId}', 'UsuarioController@avaliarMotorista');
 
     Route::post('/logout', 'LoginController@logout');
 

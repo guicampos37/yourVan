@@ -30,9 +30,17 @@
             <div class="card-container">
             @foreach(Session::get('vans') as $van)
                 <div class="card-search d-flex">
-                    <div class="perfil-card">
-                        <img src="{{ asset('storage/assets/img/perfil-de-usuario.png') }}" alt="perfil-motorista">
-                        <span> {{ $van->usuario->nome }}</span>
+                    <div class="perfil-card">                        
+                        <div class="ml-4">
+                            <span id="">
+                                {{ $van->usuario->mediaNota !== 0 ? $van->usuario->mediaNota : ''}}
+                            </span>
+                            @if($van->usuario->mediaNota !== 0)
+                                <img src="{{ asset('storage/assets/img/estrela.png') }}" alt="Avaliação">
+                            @endif
+                        </div>
+                        <img src="{{ asset('storage/assets/img/perfil-de-usuario.png') }}" alt="Perfil do Motorista" class="img-perfil">
+                        <span>{{ $van->usuario->nome }}</span>
                     </div>
                     <div class="info-card">
                         <div class="info-van-card">

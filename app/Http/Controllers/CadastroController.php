@@ -34,7 +34,7 @@ class CadastroController extends Controller
         $newUser->senha = $hashSenha;
         $newUser->email = $request->email;
         $newUser->cpf = $request->cpf;
-        $newUser->tel = $request->tel;
+        $newUser->tel = preg_replace('/\D/', '', $request->tel);
         $newUser->acesso_id = 1;
 
         $newUser->save();
@@ -69,7 +69,7 @@ class CadastroController extends Controller
         $newUser->senha = $hashSenha;
         $newUser->email = $request->email;
         $newUser->cpf = $request->cpf;
-        $newUser->tel = $request->tel;
+        $newUser->tel = preg_replace('/\D/', '', $request->tel);
         $newUser->acesso_id = 2;
 
         $newUser->save();

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Usuario;
 use App\Van;
 use App\Instituicao;
+use App\AvaliacaoMotorista;
 use Illuminate\Support\Facades\Auth;
 
 class PesquisaController extends Controller
@@ -15,19 +16,32 @@ class PesquisaController extends Controller
             return redirect()->route('login-usuario');
         }
 
-        return view('pesquisa.home');        
+        $topRatedDrivers = $this->getTopRatedDrivers();
+        return view('pesquisa.home', compact('topRatedDrivers'));       
     }
 
     public function buscaMotorista(Request $request) {
-        $vans = $this->buscaPorInst($request->busca);
-        
-        if($vans == null) {
+        $vans = collect($this->buscaPorInst($request->busca));
+    
+        if($vans->isEmpty()) {
             return redirect('/busca')->withErrors(['msg' => 'Nenhum resultado obtido']);
         }
-
-        return redirect('/busca')->with(['vans' => $vans]);
+    
+        $vans->transform(function ($van) {
+            $mediaNota = AvaliacaoMotorista::where('motorista_id', $van->usuario->id)->avg('nota');
+            $van->usuario->mediaNota = $mediaNota !== null ? number_format($mediaNota, 1) : 0; 
+            return $van;
+        });
+    
+        $vans = $vans->sortByDesc(function ($van) {
+            return $van->usuario->mediaNota !== 'N/A' ? $van->usuario->mediaNota : 0;
+        })->values();
+    
+        session(['vans' => $vans]);
+    
+        return redirect('/busca');
     }
-
+    
     public function show() {
         return view('pesquisa.show');
     }
@@ -56,8 +70,26 @@ class PesquisaController extends Controller
     
 
     public function dadosMotorista($id) {
-        $usuario = Usuario::find($id);
+        $usuario = Usuario::with('avaliacoes')->findOrFail($id);
+    
+        $mediaNota = $usuario->avaliacoes()->avg('nota');
+    
+        $mediaNota = round($mediaNota, 1);
+    
+        return view('pesquisa.dadosMotorista', compact('usuario', 'mediaNota'));
+    }
 
-        return view('pesquisa.dadosMotorista', compact('usuario'));
+    public function getTopRatedDrivers($limit = 5) {
+        $topRatedDrivers = Usuario::whereHas('avaliacoes')
+            ->with('avaliacoes')
+            ->get()
+            ->map(function ($driver) {
+                $driver->averageRating = $driver->avaliacoes->avg('nota');
+                return $driver;
+            })
+            ->sortByDesc('averageRating')
+            ->take($limit);
+
+        return $topRatedDrivers;
     }
 }

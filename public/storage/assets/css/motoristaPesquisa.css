@@ -82,10 +82,6 @@ border-radius: 10px;
 .carac-perfil{
     display: flex;
     flex-direction: column;
-  
-    width: 180px;
-    height: 230px;
-
 }
 .perfil-avaliacao{
     display: flex;
@@ -102,7 +98,7 @@ border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    margin-right: 20px;
 }
 #nome-motorista{
     font-size: 1.5rem;
@@ -296,4 +292,16 @@ footer h3{
 }
 a{
     cursor: pointer;
+}
+.success-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: none;
 }

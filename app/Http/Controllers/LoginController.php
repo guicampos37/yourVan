@@ -28,6 +28,8 @@ class LoginController extends Controller
             Auth::login($user);
 
             return redirect('/home');
+        } else {
+            return redirect('/login')->withErrors(['msg' => 'Email e/ou senha incorretos']);
         }
     }
 

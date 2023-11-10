@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Instituicao;
 use App\Bairro;
+use App\AvaliacaoMotorista;
 
 class UsuarioController extends Controller
 {
@@ -59,6 +60,19 @@ class UsuarioController extends Controller
 
     
         return redirect('/perfil-motorista')->with('success', 'Perfil atualizado com sucesso!');
+    }
+
+    public function avaliarMotorista(Request $request, $motoristaId) {
+        $request->validate([
+            'fb' => 'required|integer|min:1|max:5', 
+        ]);
+
+        $avaliacao = new AvaliacaoMotorista();
+        $avaliacao->motorista_id = $motoristaId;
+        $avaliacao->nota = $request->fb;
+        $avaliacao->save();
+
+        return back()->with('success', 'Avaliação enviada com sucesso!');
     }
     
     

@@ -19,4 +19,8 @@ class Usuario extends Authenticatable
     public function van() {
         return $this->hasOne(Van::class, 'user_id');
     }
+
+    public function avaliacoes() {
+        return $this->hasMany(AvaliacaoMotorista::class, 'motorista_id');
+    }
 }
