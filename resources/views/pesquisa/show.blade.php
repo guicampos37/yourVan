@@ -13,6 +13,18 @@
                 <input class="input-search" type="text" name="busca" placeholder="Busque um motorista por instituição...">
                 <button id="btnPesquisa"><img id="img-search" src="{{ asset('storage/assets/img/search.png') }}" alt="Busca"></button>
             </div>
+
+            @if ($errors->any())
+                <div class="text-danger mt-3">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+
         </form>
         @if(Session::get('vans') != null)
             <div class="card-container">

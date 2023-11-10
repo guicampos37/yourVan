@@ -18,6 +18,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/home', 'PesquisaController@home');
     Route::post('/home', 'PesquisaController@buscaMotorista');
     Route::get('/busca', 'PesquisaController@show');
+    Route::post('/busca', 'PesquisaController@buscaMotorista');
     Route::get('dados-motorista/{id}', 'PesquisaController@dadosMotorista');
 
     Route::post('/logout', 'LoginController@logout');

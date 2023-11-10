@@ -22,7 +22,7 @@ class PesquisaController extends Controller
         $vans = $this->buscaPorInst($request->busca);
         
         if($vans == null) {
-            return redirect('/home')->withErrors(['msg' => 'Nenhum resultado obtido']);
+            return redirect('/busca')->withErrors(['msg' => 'Nenhum resultado obtido']);
         }
 
         return redirect('/busca')->with(['vans' => $vans]);
@@ -32,27 +32,28 @@ class PesquisaController extends Controller
         return view('pesquisa.show');
     }
 
-    public function buscaPorInst($value){
+    public function buscaPorInst($value) {
         if($value == '') {
-            $instituicoes = Instituicao::get();
+            $instituicoes = Instituicao::all();
         } else {
-            $instituicoes = Instituicao::where('nome', 'like', $value . '%')->get();
+            $instituicoes = Instituicao::where('nome', 'like', '%' . $value . '%')->get();
         }
-
-        if($instituicoes == null) {
+    
+        if($instituicoes->isEmpty()) {
             return null;
         }
-
-        $arrayVans = [];
-
+    
+        $vans = collect();
+    
         foreach($instituicoes as $instituicao) {
             foreach($instituicao->vans as $van) {
-                $arrayVans[] = $van;
+                $vans->push($van);
             }
         }
-
-        return $arrayVans;
+    
+        return $vans->unique('id')->values()->all();
     }
+    
 
     public function dadosMotorista($id) {
         $usuario = Usuario::find($id);

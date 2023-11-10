@@ -22,6 +22,17 @@ class UsuarioController extends Controller
         return view('usuario.perfilMotorista', compact('instituicoes', 'bairros', 'instituicoesAtendidas', 'bairrosAtendidos'));
     }
 
+    public function updateUsuarioComum(Request $request) {
+        $user = Auth::user();
+        $user->nome = $request->nome;
+        $user->tel = $request->tel;
+        $user->email = $request->email;
+
+        $user->save();
+
+        return redirect('/perfil-usuario')->with('success', 'Perfil atualizado com sucesso!');
+    }
+
     public function updateUsuarioMotorista(Request $request) { 
         $user = Auth::user();
         $user->nome = $request->nome;

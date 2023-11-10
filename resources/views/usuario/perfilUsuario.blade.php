@@ -16,18 +16,19 @@
                     <span class="nome-perfil-usuario">{{Auth::user()->nome}}</span>
                 </div>
                 <div class="perfil-usuario-inputs">
-                    <form action="" class="form-perfil-usuario ">
+                    <form action="/perfil-usuario" method="POST" class="form-perfil-usuario ">
+                        @csrf
                         <div>
                             <label for="">Nome</label>
-                            <input type="text" value="{{ Auth::user()->nome }}">
+                            <input type="text" name="nome" value="{{ Auth::user()->nome }}">
                         </div>
                         <div>
                             <label for="">Telefone</label>
-                            <input type="text" value="{{ Auth::user()->tel }}">
+                            <input type="text" name="tel" value="{{ Auth::user()->tel }}">
                         </div>
                         <div>
                             <label for="">E-mail</label>
-                            <input type="text" value="{{ Auth::user()->email }}">
+                            <input type="text" name="email" value="{{ Auth::user()->email }}">
                         </div> 
                         <div class="perfil-usuario-editar">
                             <img src="{{ asset('storage/assets/img/edit.png') }}" alt="Editar" id="img-edit">
