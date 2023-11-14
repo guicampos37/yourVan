@@ -16,7 +16,7 @@
 @endpush
 
 @section('content')
-    <section class="global">
+    {{-- <section class="global">
         <main class="container">
             <div class="container back-button">
                 <a href="home" id="btnVoltar"> <img id="back-button" src="{{ asset('storage/assets/img/back-button.png') }}" alt="Voltar"></a>
@@ -94,7 +94,75 @@
                 </form>
             </div>
         </main>
+    </section> --}}
 
+    <section class="global">
+        <main class="container">
+            <div class="container back-button">
+                <a href="home" id="btnVoltar"> <img id="back-button" src="{{ asset('storage/assets/img/back-button.png') }}" alt="Voltar"></a>
+            </div>
 
+            <form class="d-grid border border-secondary rounded w-50 h-75" method="POST"> {{-- Tirar border e --}}
+                @csrf
+                <div class="d-flex justify-content-around">
+                    <div>
+                        <div class="perfil-usuario-img">
+                            <img src="{{ asset('storage/assets/img/perfil-de-usuario.png') }}" alt="Perfil de Usuário">
+                            <span class="nome-perfil-usuario">{{ Auth::user()->nome }}</span>
+                        </div>
+                    </div>
+
+                    <div class="perfil-usuario-inputs">
+                        <div class="form-perfil-usuario">
+                            <div>
+                                <label for="">Nome</label>
+                                <input type="text" name="nome" value="{{Auth::user()->nome}}">
+                            </div>
+                            <div>
+                                <label for="">Telefone</label>
+                                <input type="text" name="tel" value="{{ Auth::user()->tel }}">
+                            </div>
+                            <div>
+                                <label for="">E-mail</label>
+                                <input type="text" name="email" value="{{ Auth::user()->email }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-around">
+                    <div class="perfil-usuario-info-van w-25">
+                        <div class="info-van-item">
+                            <label for="ar-condicionado">Ar Condicionado</label>
+                            <input id="ar-condicionado" name="carac[]" type="checkbox" value="1" class="form-check-input" @if(Auth::user()->van->ar_condicionado == 1) checked @endif>
+                        </div>
+                        <div class="info-van-item">
+                            <label for="wi-fi">Wi-fi</label>
+                            <input id="wi-fi" name="carac[]" type="checkbox" value="2" class="form-check-input" @if(Auth::user()->van->wifi == 1) checked @endif>
+                        </div>
+                        <div class="info-van-item">
+                            <label for="van-teto-alto">Van Teto Alto</label>
+                            <input id="van-teto-alto" name="carac[]" type="checkbox" value="3" class="form-check-input" @if(Auth::user()->van->teto_alto == 1) checked @endif>
+                        </div>
+                        <div class="info-van-item">
+                            <label for="porta-automatica">Porta Automática</label>
+                            <input id="porta-automatica" name="carac[]" type="checkbox" value="4" class="form-check-input" @if(Auth::user()->van->porta_auto == 1) checked @endif>
+                        </div>
+                        <div class="info-van-item">
+                            <label for="assistente">Assistente</label>
+                            <input id="assistente" name="carac[]" type="checkbox" value="5" class="form-check-input" @if(Auth::user()->van->assistente == 1) checked @endif>
+                        </div>
+                        <div class="info-van-item">
+                            <label for="poltrona-estofada">Poltrona Estofada</label>
+                            <input id="poltrona-estofada" name="carac[]" type="checkbox" value="6" class="form-check-input" @if(Auth::user()->van->poltrona_estofada == 1) checked @endif>
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
     </section>
 @endsection

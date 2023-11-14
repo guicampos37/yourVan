@@ -12,10 +12,6 @@ use Illuminate\Support\Facades\Auth;
 class PesquisaController extends Controller
 {
     public function home() {
-        if(Auth::check() == false) {
-            return redirect()->route('login-usuario');
-        }
-
         $topRatedDrivers = $this->getTopRatedDrivers();
         return view('pesquisa.home', compact('topRatedDrivers'));       
     }

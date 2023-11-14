@@ -1,7 +1,7 @@
 .global{
 
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
 }
 
 body{
@@ -50,12 +50,7 @@ main{
     font-weight: bold;
 }
 .form-perfil-usuario{
-    width: 650px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 30px;
+    margin-top: 20px;
 }
 .form-perfil-usuario div label{
     margin-right: 10px;
@@ -97,10 +92,10 @@ main{
 }
 
 .perfil-usuario-info-van{
-    display: flex;
+    /* display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; */
 }
 .info-van-spans{
     display: flex;
