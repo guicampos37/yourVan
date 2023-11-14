@@ -47,3 +47,15 @@
 #perfil {
     text-decoration: none;
 }
+.success-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: none;
+} 

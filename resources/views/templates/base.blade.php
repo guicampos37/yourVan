@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('/storage/assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ asset('storage/assets/css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('storage/assets/css/footer.css') }}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <title>@yield('titulo')</title>
     @yield('css')
 </head>

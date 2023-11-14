@@ -95,7 +95,7 @@ class CadastroController extends Controller
 
         DB::table('van_instituicoes')->insert($vanInstituicoes);
 
-        return redirect('/');
+        return redirect('/login');
     }
 
     public function verificaCaracsVan($van, $caracs) {

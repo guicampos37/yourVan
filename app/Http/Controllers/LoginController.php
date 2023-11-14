@@ -26,6 +26,9 @@ class LoginController extends Controller
 
         if(Hash::check($request->senha, $user->senha)) {
             Auth::login($user);
+            if($user->acesso_id == 2) {
+                return redirect('/perfil-motorista');                
+            }
 
             return redirect('/home');
         } else {

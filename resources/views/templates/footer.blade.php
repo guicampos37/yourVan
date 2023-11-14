@@ -1,4 +1,4 @@
-<footer>
+<footer class="d-flex">
     <div class="footer-empresarial">
         <h3>Yourvan</h3>
         <span>Empresa criada com o intuito de facilitar a relação entre condutor e cliente. Nossa missão é acabar com a dificuldade quando se trata de busca por transporte escolar
