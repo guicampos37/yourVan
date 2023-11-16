@@ -39,7 +39,7 @@ class CadastroController extends Controller
 
         $newUser->save();
 
-        return redirect('/');
+        return redirect('/login')->with('success', 'Cadastro realizado com sucesso!');
     }
 
     public function createUsuarioMotorista() {

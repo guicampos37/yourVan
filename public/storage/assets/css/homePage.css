@@ -81,62 +81,28 @@ main{
     font-size: 1.5rem;
 }
 
-/* ZONAS */
+.img-card {
+    height: 150px;
+}
 
-.zone-content-box{
-    width: 715px;
-    border: 3px solid #E8A20C;
-    border-radius: 20px;
-    margin: 0 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
+.card-motorista-width {
+    width: 35%;
 }
-.zone-content-box-left{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
+.descricao-texto {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333; 
+    margin-bottom: 1rem;
 }
-.zone-content-box-right{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+#card-motorista-width {
+    width: 35%;
 }
-.zone{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.img-carrossel {
+    width: 500px;
+    height: 300px;
 }
-.zone a{
-   text-decoration: none;
-   background-color: #E8A20C;
-   padding: 15px;
-   width: 180px;
-   text-align: center;
-   border-radius: 10px ;
-   font-weight: bold;
-   border: 2px solid black;
-}
-.zone-leste, .zone-oeste, .zone-norte, .zone-sul{
-    height: 50%;
-}
-.zone-oeste{
-    border: 1px solid #E8A20C;
-    border-top: none;
-    border-left: none;
-}
-.zone-sul{
-    border-bottom: 1px solid #E8A20C;
-}
-.zone-leste{
-    border-right: 1px solid #E8A20C;
-}
-.zone-box{
-    width: 715px;
-}
-.zone-box .title-box{
-    width: 300px;
+.nome-universidade-carrossel {
+    color: purple;
+    font-family: sans-serif;
+    font-weight: bold;
 }

@@ -30,7 +30,7 @@ class LoginController extends Controller
                 return redirect('/perfil-motorista');                
             }
 
-            return redirect('/home');
+            return redirect()->intended('/home');
         } else {
             return redirect('/login')->withErrors(['msg' => 'Email e/ou senha incorretos']);
         }

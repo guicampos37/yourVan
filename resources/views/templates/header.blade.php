@@ -2,11 +2,7 @@
     <div class="header-container">
         <div class="header-box container">
             <div>
-                @if(Auth::check())
                     <a href="/home"><img id="img-logo" src="{{asset('storage/assets/img/logo-yourvan-100.png')}}" alt="logo-yourvan"></a>
-                @else
-                    <a href="/login"><img id="img-logo" src="{{asset('storage/assets/img/logo-yourvan-100.png')}}" alt="logo-yourvan"></a>
-                @endif
             </div>
             @if(Auth::check())
                 @if(Auth::user()->acesso_id == 1)
@@ -40,6 +36,12 @@
                         </form>
                     </div>
                 @endif
+            @else
+            <div class="d-flex align-items-center">
+                <div>
+                    <span class="header-links"><a href="/login">Login</a> | <a href="/cadastro-usuario-comum">Cadastrar-se</a></span>
+                </div>
+            </div>
             @endif
         </div>  
     </div>

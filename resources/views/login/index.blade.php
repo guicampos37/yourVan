@@ -14,6 +14,25 @@
                             Seja Bem Vindo!
                         </h2>
                     </div>
+
+                    @if (session('success'))
+                        <div id="success-popup" class="success-popup">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+            
+                    @if (session('success'))
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var popup = document.getElementById('success-popup');
+                                popup.style.display = 'block';
+                                
+                                setTimeout(function() {
+                                    popup.style.display = 'none';
+                                }, 3000);
+                            });
+                        </script>
+                    @endif
                     
                     <form method="POST">
                         @csrf
