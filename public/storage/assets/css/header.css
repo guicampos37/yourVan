@@ -3,12 +3,14 @@
     font-family: 'Roboto', sans-serif;
 }
 .header-container{
-    background-color: #ffffff;
+    background-color: #ffb01357;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
-    border-bottom: #FFB013 2px solid;
+    border-bottom: #ffb013c5 1px solid;
+    box-shadow: 10px 10px 5px #6b69694f;
 }
 .header-box{
     width: 100vw;
@@ -18,31 +20,39 @@
    
 
 }
-.header-container{
-    background-color: #ffffff;
+/* .header-container{
+    background-color: #ffb01357;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
-    border-bottom: #FFB013 2px solid;
+    border-bottom: #ffb013c5 1px solid;
+    
+    box-shadow: 10px 10px 5px #6b69694f;
 }
 .header-box{
     width: 100vw;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+} */
 #img-menu {
     width: 35%;
+    color: #000000;
 }
 #meu-perfil {
     font-size: 0.8rem;
-    color: #FFB013;
+    color: #000000;
     font-weight: bold;
     margin: 4px 4px;
+    opacity: 100%;
+    transition: 1s;
 }
 #meu-perfil:hover {
     color: black;
+    font-size: 0.9rem;
 }
 #perfil {
     text-decoration: none;
@@ -66,6 +76,6 @@
 }
 
 .header-links a:hover{
-    color: #FFB013;
+    color: #000000;
     text-decoration: none;
 }

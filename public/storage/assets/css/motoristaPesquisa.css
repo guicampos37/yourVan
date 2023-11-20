@@ -16,13 +16,13 @@ body{
     margin-right: 10px;
     margin-left: 20px;
 }
-.header-container{
+/* .header-container{
     background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
-    border-bottom: #FFB013 2px solid;
+    border-bottom: #000000 2px solid;
 }
 .header-box{
     width: 100vw;
@@ -31,14 +31,16 @@ body{
     align-items: center;
    
 
-}
+} */
 .header-container{
-    background-color: #ffffff;
+    background-color: #ffb01357;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
-    border-bottom: #FFB013 2px solid;
+    border-bottom: #ffb013c5 1px solid;
+    box-shadow: 10px 10px 5px #6b69694f;
 }
 .header-box{
     width: 100vw;
@@ -69,8 +71,9 @@ main{
 
 .perfil-motorista{
 padding: 30px;
-border: 4px solid black;
+border: 1px solid rgb(107, 107, 107);
 border-radius: 10px;
+box-shadow: 10px 10px 5px rgba(133, 132, 132, 0.637);
 }
 .perfil-motorista-carac{
     display: flex;
@@ -172,25 +175,37 @@ border-radius: 10px;
     margin-top: 30px;
 }
 #button-contato-motorista{
-    background: #5EA859;
-    color: black;
-    font-weight: bold;
-    border: 3px solid black;
+    background: #0c860494;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    border: 1px solid black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 14px;
     padding: 8px;
     width: 130px;
      font-size: 1.3rem;
     margin-right: 40px;
+    transition: 0.5s ease;
 }
 #button-avaliacao-motorista{
-    background: #FFCB0D;
+    background: #ffcb0d91;
     color: black;
-    font-weight: bold;
-    border: 3px solid black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-weight: 300;
+    border: 1px solid black;
     border-radius: 14px;
     padding: 8px;
     width: 130px;
    font-size: 1.3rem;
+   transition: 0.5s ease;
+}
+#button-contato-motorista:hover{
+    font-weight: bold;
+}
+
+#button-avaliacao-motorista:hover{
+    font-weight: bold;
 }
 
 /* Estrelas */
@@ -259,8 +274,8 @@ border-radius: 10px;
     margin-top: 15px;
     margin-right: 20px;
   }
-  
-  /* Footer */
+/*   
+  /* Footer 
 
 footer{
     display: flex;
@@ -292,4 +307,4 @@ footer h3{
 }
 a{
     cursor: pointer;
-}
+} */

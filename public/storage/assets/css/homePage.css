@@ -37,7 +37,7 @@ main{
 }
 .input-search{
     width: 350px;
-    border: 3px solid #E8A20C;
+    border: 1px solid #020202;
     border-radius: 10px;
     padding: 5px 0px 5px 10px;
    
@@ -68,7 +68,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid #E8A20C;
+    border: 5px solid #E8A20C;
     padding: 25px;
     border-radius: 20px;
     width: 715px;
@@ -89,20 +89,36 @@ main{
     width: 35%;
 }
 .descricao-texto {
+    font-size: 2rem;
+    line-height: 1.0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(51, 51, 51, 0.411)a4a; 
+    margin-bottom: 1rem;
+    margin-left: 0.9rem;
+}
+
+.descricao-texto-2 {
     font-size: 1rem;
     line-height: 1.5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-style: italic;
     color: #333; 
     margin-bottom: 1rem;
 }
 #card-motorista-width {
-    width: 35%;
+    width: 25%;
 }
 .img-carrossel {
     width: 500px;
     height: 300px;
 }
 .nome-universidade-carrossel {
-    color: purple;
+    color: rgb(0, 0, 0);
+    background-color: rgb(89, 89, 90);
+    width: 25%;
+    border-radius: 10px;
     font-family: sans-serif;
-    font-weight: bold;
+    
+    font-weight: 300;
 }

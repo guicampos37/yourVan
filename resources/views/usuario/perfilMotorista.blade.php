@@ -21,7 +21,7 @@
             <div class="container back-button">
                 <a href="home" id="btnVoltar"> <img id="back-button" src="{{ asset('storage/assets/img/back-button.png') }}" alt="Voltar"></a>
             </div>
-            <div class="perfil-usuario">
+            <div class="perfil-usuario2">
                 <form action="/perfil-motorista" method="POST">
                     @csrf
                     <div class="perfil-usuario-header">

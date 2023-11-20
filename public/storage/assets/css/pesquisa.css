@@ -40,7 +40,7 @@ main{
 }
 .input-search{
     width: 350px;
-    border: 3px solid #E8A20C;
+    border: 1px solid #000000;
     border-radius: 10px;
     padding: 5px 0px 5px 10px;
    
@@ -55,7 +55,8 @@ main{
     display: flex;
     align-items: center;
     margin-top: 100px;
-    border: 5px solid #FFB013;
+    border: 1px solid #aaa9a8;
+    box-shadow: 10px 10px 5px #aaa9a8;
     border-radius: 10px;
     /* min-width: 43%; */
 }
@@ -73,20 +74,19 @@ main{
 
 .info-card {
     width: 100%;
-    border-left: 5px solid #FFB013;
+    border-left: 1px solid #a7a7a7;
 
 }
 
 .info-van-card{
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    border-bottom: 5px solid #FFB013;
+    border-bottom: 1px solid #000000;
     padding: 8px;
 }
 .zona-card{
     align-items: center;
-    border-bottom: 5px solid #FFB013;
     padding: 8px;
     width: 100%;
 }
@@ -109,10 +109,22 @@ main{
 }
 #more-info-card{
     width: 200px;
-    background-color: #FF9600;
+    background-color: #faf9f7;
     font-weight: bold;
-    border: 3px solid black;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+    transition: 1s;
+}
+
+#more-info-card:hover{
+    width: 200px;
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     padding: 5px 5px 5px 10px;
 }
+
 

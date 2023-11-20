@@ -105,7 +105,7 @@
             </div>
             <div class="perfil-motorista-buttons">
                 <div class="motorista-buttons-actions">
-                    <a id="button-contato-motorista" href="https://wa.me/{{ $usuario->tel }}" class="btn btn-primary" target="_blank">Contato</a>
+                    <a id="button-contato-motorista" href="https://wa.me/{{ $usuario->tel }}" class="btn btn-primary" target="_blank">Whatsapp</a>
                     <button id="button-avaliacao-motorista">Avaliar</button>
                 </div>
 

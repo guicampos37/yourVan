@@ -21,10 +21,8 @@
 
         <div class="d-flex w-50 mt-5">
             <div class="w-100">
-                <h4 class="descricao-texto">"Encontre facilmente o transporte ideal para seu dia a dia acadêmico com a nossa aplicação dedicada a conectar estudantes às melhores opções de vans para universidades.
-                Se você está buscando por um transporte confiável e conveniente para a Facens ou qualquer outra instituição, nossa plataforma facilita a pesquisa e te apresenta aos
-                motoristas de vans mais bem avaliados e dedicados a atender justamente a sua necessidade. Digite o nome da sua universidade, compare as opções, e escolha o motorista que 
-                melhor se encaixa na sua rotina, garantindo uma viagem segura, confortável e pontual para os seus estudos."</h4>
+                <h2 class="descricao-texto">Encontre facilmente o transporte ideal <br><b>para seu dia a dia acadêmico</b></br> com a nossa aplicação dedicada a conectar estudantes às melhores opções de vans para universidades.
+                </h2>
             </div>
         </div>
 
@@ -32,7 +30,7 @@
             <div id="topRatedDriversCarousel" class="carousel slide mt-5 w-50" data-ride="carousel">
                 <div class="carousel-inner mt-3 w-100">
                     <div class="text-center">
-                        <h3>Lista dos motoristas mais bem avaliados!</h3>
+                        <h4>Lista dos motoristas mais bem avaliados!</h4>
                     </div>
                     @foreach($topRatedDrivers as $index => $driver)
                         <div class="card-motorista-width p-5 carousel-item {{ $index == 0 ? 'active' : '' }}">
@@ -96,7 +94,7 @@
 
             <div class="w-50 d-flex flex-column justify-content-center align-items-center mt-5">
                 <div class="text-center">
-                    <h3>Lista das universidades mais buscadas:</h3>
+                    <h4>Lista das universidades mais buscadas:</h4>
                 </div>
                 <div id="instituicoesCarousel" class="carousel slide mt-5" data-ride="carousel">
                     <div class="carousel-inner">
@@ -126,10 +124,24 @@
                     <a class="carousel-control-next" href="#instituicoesCarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Próximo</span>
+
                     </a>
-                </div>
+
+                    </div>
+
             </div>
+            
         </div>
+        <div class="d-flex w-50 mt-5">
+                <div class="w-100">
+                    <h4 class="descricao-texto-2">Se você está buscando por um transporte confiável e conveniente para a Facens ou qualquer outra instituição, nossa plataforma facilita a pesquisa e te apresenta aos
+                motoristas de vans mais bem avaliados e dedicados a atender justamente a sua necessidade. Digite o nome da sua universidade, compare as opções, e escolha o motorista que 
+                melhor se encaixa na sua rotina, garantindo uma viagem segura, confortável e pontual para os seus estudos.
+                </h4>
+                </div>
+
+
+            </div>
     </main>
 </section>
 @endsection

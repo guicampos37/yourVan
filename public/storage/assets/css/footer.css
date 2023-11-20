@@ -5,29 +5,35 @@ footer{
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-    border-top: 2px solid #E8A20C;
+    border-top: 1px solid #E8A20C;
+    box-shadow: 10px 10px 5px #6b69694f;
     padding: 10px 200px 0px 200px;
+    
 }
 .footer-empresarial{
+
     width: 40%;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    margin-left: 5px;
     height: 200px;
-    
+
 }
 
 footer h3{
-    color: #E8A20C;
+    color: #000000b7;
 }
+
 .footer-inst{
     width: 60%;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     height: 200px;
-    margin-left: 50px;
+    margin-left: 70px;
 }
+
 a{
     cursor: pointer;
 }
